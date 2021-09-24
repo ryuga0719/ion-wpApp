@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      記事一覧
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card *ngFor="let p of posts; trackBy: trackByFn" routerLink="/home/{{p.ID}}">
+   <app-wp-head title="{{p.title}}" date="{{p.date}}"></app-wp-head>
+ </ion-card>
+</ion-content>
